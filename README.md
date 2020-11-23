@@ -1,2 +1,3 @@
-# TCC_2
-Repositório contendo a documentação e a implementação do trabalho proposto no Trabalho de conclusão de curso I
+# Trabalho de Conclusão de Curso II
+### Aluno: João Mateus Dias do Carmo (joaomateus102030@gmail.com)
+### Orientação: Francisco Helder (helderhdw@gmail.com)
