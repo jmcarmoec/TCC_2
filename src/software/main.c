@@ -19,9 +19,9 @@ int main(void) {      //Toggle a GPIO (FBD48 pin 23, PIO0_7, controls the LED on
      while(1){                      //infinite loop
  
           LPC_GPIO0->DATA           |= (1<<7);    //set pin high (sec 12.3.1)
-          for(i=0; i<0xFFFFF; ++i);               //arbitrary delay
+          for(i=0; i<0xEEEEE; ++i);               //arbitrary delay
           LPC_GPIO0->DATA           &= ~(1<<7);   //set pin low (sec 12.3.1)
-          for(i=0; i<0xFFFFF; ++i);               //arbitrary delay
+          for(i=0; i<0x55555; ++i);               //arbitrary delay
  
      }
       return 0 ;
