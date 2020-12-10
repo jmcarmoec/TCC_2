@@ -1,0 +1,246 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                              SYSTEM~1.o (__aeabi_uidiv)
+/home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                              /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Discarded input sections
+
+ .data          0x0000000000000000        0x0 main.o
+ .bss           0x0000000000000000        0x0 main.o
+ .text          0x0000000000000000       0xd2 core_cm0.o
+ .data          0x0000000000000000        0x0 core_cm0.o
+ .bss           0x0000000000000000        0x0 core_cm0.o
+ .debug_info    0x0000000000000000      0x2fb core_cm0.o
+ .debug_abbrev  0x0000000000000000       0xeb core_cm0.o
+ .debug_loc     0x0000000000000000       0xe0 core_cm0.o
+ .debug_aranges
+                0x0000000000000000       0x20 core_cm0.o
+ .debug_line    0x0000000000000000      0x196 core_cm0.o
+ .debug_str     0x0000000000000000      0x24f core_cm0.o
+ .comment       0x0000000000000000       0x4d core_cm0.o
+ .debug_frame   0x0000000000000000       0xdc core_cm0.o
+ .ARM.attributes
+                0x0000000000000000       0x2c core_cm0.o
+ .data          0x0000000000000000        0x0 crt.o
+ .bss           0x0000000000000000        0x0 crt.o
+ .data          0x0000000000000000        0x0 vtable.o
+ .bss           0x0000000000000000        0x0 vtable.o
+ .bss           0x0000000000000000        0x0 SYSTEM~1.o
+ .data          0x0000000000000000        0x0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000000000        0x0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .data          0x0000000000000000        0x0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000008000 xr
+RAM              0x0000000010000000 0x0000000000001000 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+START GROUP
+END GROUP
+LOAD main.o
+LOAD core_cm0.o
+LOAD crt.o
+LOAD vtable.o
+LOAD SYSTEM~1.o
+START GROUP
+LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a
+LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a
+END GROUP
+
+.text           0x0000000000000000      0x630
+                0x0000000000000000                _stext = .
+ CREATE_OBJECT_SYMBOLS
+ *(.vectors)
+ .vectors       0x0000000000000000       0xc0 vtable.o
+                0x0000000000000000                gVectors
+ *(.text)
+ .text          0x00000000000000c0       0x9c main.o
+                0x00000000000000c0                main
+ .text          0x000000000000015c       0x70 crt.o
+                0x0000000000000160                ResetHandler
+ .text          0x00000000000001cc        0x8 vtable.o
+                0x00000000000001cc                NMI_Handler
+                0x00000000000001ce                HardFault_Handler
+                0x00000000000001d0                IntDefaultHandler
+ .text          0x00000000000001d4      0x304 SYSTEM~1.o
+                0x00000000000001da                SystemCoreClockUpdate
+                0x00000000000003fc                SystemInit
+ .text          0x00000000000004d8      0x114 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x00000000000004d8                __udivsi3
+                0x00000000000004d8                __aeabi_uidiv
+                0x00000000000005e4                __aeabi_uidivmod
+ .text          0x00000000000005ec        0x4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x00000000000005ec                __aeabi_ldiv0
+                0x00000000000005ec                __aeabi_idiv0
+ *(.text.*)
+                0x00000000000005f0                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x00000000000005f0       0x40 SYSTEM~1.o
+ *(.rodata.*)
+                0x0000000000000630                . = ALIGN (0x4)
+                0x0000000000000630                _etext = .
+
+.glue_7         0x0000000000000630        0x0
+ .glue_7        0x0000000000000630        0x0 linker stubs
+
+.glue_7t        0x0000000000000630        0x0
+ .glue_7t       0x0000000000000630        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000000630        0x0
+ .vfp11_veneer  0x0000000000000630        0x0 linker stubs
+
+.v4_bx          0x0000000000000630        0x0
+ .v4_bx         0x0000000000000630        0x0 linker stubs
+
+.iplt           0x0000000000000630        0x0
+ .iplt          0x0000000000000630        0x0 main.o
+
+.rel.dyn        0x0000000000000630        0x0
+ .rel.iplt      0x0000000000000630        0x0 main.o
+
+.data           0x0000000010000000        0x4 load address 0x0000000000000630
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sdata = .
+ *(.data)
+ .data          0x0000000010000000        0x4 SYSTEM~1.o
+                0x0000000010000000                SystemCoreClock
+ *(.data.*)
+                0x0000000010000004                . = ALIGN (0x4)
+ *(.fastrun)
+ *(.fastrun.*)
+                0x0000000010000004                . = ALIGN (0x4)
+                0x0000000010000004                _edata = .
+
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000634
+ .igot.plt      0x0000000010000004        0x0 main.o
+
+.bss            0x0000000010000004        0x0
+                0x0000000010000004                . = ALIGN (0x4)
+                0x0000000010000004                _sbss = .
+ *(.bss)
+ *(.bss.*)
+                0x0000000010000004                . = ALIGN (0x4)
+                0x0000000010000004                _ebss = .
+                0x0000000010001000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+OUTPUT(Debug.elf elf32-littlearm)
+LOAD linker stubs
+
+.debug_info     0x0000000000000000      0xfb5
+ .debug_info    0x0000000000000000      0x8d3 main.o
+ .debug_info    0x00000000000008d3      0x13c crt.o
+ .debug_info    0x0000000000000a0f       0xb9 vtable.o
+ .debug_info    0x0000000000000ac8      0x4ed SYSTEM~1.o
+
+.debug_abbrev   0x0000000000000000      0x352
+ .debug_abbrev  0x0000000000000000      0x13f main.o
+ .debug_abbrev  0x000000000000013f       0x9c crt.o
+ .debug_abbrev  0x00000000000001db       0x88 vtable.o
+ .debug_abbrev  0x0000000000000263       0xef SYSTEM~1.o
+
+.debug_loc      0x0000000000000000       0xa4
+ .debug_loc     0x0000000000000000       0x20 main.o
+ .debug_loc     0x0000000000000020       0x2c crt.o
+ .debug_loc     0x000000000000004c       0x58 SYSTEM~1.o
+
+.debug_aranges  0x0000000000000000       0x80
+ .debug_aranges
+                0x0000000000000000       0x20 main.o
+ .debug_aranges
+                0x0000000000000020       0x20 crt.o
+ .debug_aranges
+                0x0000000000000040       0x20 vtable.o
+ .debug_aranges
+                0x0000000000000060       0x20 SYSTEM~1.o
+
+.debug_line     0x0000000000000000      0x65b
+ .debug_line    0x0000000000000000      0x166 main.o
+ .debug_line    0x0000000000000166      0x13f crt.o
+ .debug_line    0x00000000000002a5       0x55 vtable.o
+ .debug_line    0x00000000000002fa      0x361 SYSTEM~1.o
+
+.debug_str      0x0000000000000000      0x610
+ .debug_str     0x0000000000000000      0x52a main.o
+                                        0x567 (size before relaxing)
+ .debug_str     0x000000000000052a       0x5c crt.o
+                                        0x1a9 (size before relaxing)
+ .debug_str     0x0000000000000586       0x45 vtable.o
+                                        0x121 (size before relaxing)
+ .debug_str     0x00000000000005cb       0x45 SYSTEM~1.o
+                                        0x3e8 (size before relaxing)
+
+.comment        0x0000000000000000       0x4c
+ .comment       0x0000000000000000       0x4c main.o
+                                         0x4d (size before relaxing)
+ .comment       0x000000000000004c       0x4d crt.o
+ .comment       0x000000000000004c       0x4d vtable.o
+ .comment       0x000000000000004c       0x4d SYSTEM~1.o
+
+.ARM.attributes
+                0x0000000000000000       0x2c
+ .ARM.attributes
+                0x0000000000000000       0x2c main.o
+ .ARM.attributes
+                0x000000000000002c       0x2c crt.o
+ .ARM.attributes
+                0x0000000000000058       0x2c vtable.o
+ .ARM.attributes
+                0x0000000000000084       0x2c SYSTEM~1.o
+ .ARM.attributes
+                0x00000000000000b0       0x1e /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000000000000ce       0x1e /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+
+.debug_frame    0x0000000000000000      0x10c
+ .debug_frame   0x0000000000000000       0x24 main.o
+ .debug_frame   0x0000000000000024       0x38 crt.o
+ .debug_frame   0x000000000000005c       0x40 vtable.o
+ .debug_frame   0x000000000000009c       0x50 SYSTEM~1.o
+ .debug_frame   0x00000000000000ec       0x20 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+
+Cross Reference Table
+
+Symbol                                            File
+HardFault_Handler                                 vtable.o
+IntDefaultHandler                                 vtable.o
+NMI_Handler                                       vtable.o
+ResetHandler                                      crt.o
+                                                  vtable.o
+SystemCoreClock                                   SYSTEM~1.o
+SystemCoreClockUpdate                             SYSTEM~1.o
+SystemInit                                        SYSTEM~1.o
+                                                  crt.o
+__REV                                             core_cm0.o
+__REV16                                           core_cm0.o
+__REVSH                                           core_cm0.o
+__aeabi_idiv0                                     /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                                                  /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+__aeabi_ldiv0                                     /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+__aeabi_uidiv                                     /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                                                  SYSTEM~1.o
+__aeabi_uidivmod                                  /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+__get_CONTROL                                     core_cm0.o
+__get_MSP                                         core_cm0.o
+__get_PRIMASK                                     core_cm0.o
+__get_PSP                                         core_cm0.o
+__set_CONTROL                                     core_cm0.o
+__set_MSP                                         core_cm0.o
+__set_PRIMASK                                     core_cm0.o
+__set_PSP                                         core_cm0.o
+__udivsi3                                         /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+_ebss                                             crt.o
+_edata                                            crt.o
+_estack                                           vtable.o
+_etext                                            crt.o
+_sbss                                             crt.o
+_sdata                                            crt.o
+_stext                                            crt.o
+gVectors                                          vtable.o
+main                                              main.o
+                                                  crt.o
