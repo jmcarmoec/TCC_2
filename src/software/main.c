@@ -20,20 +20,20 @@
 
 
 int main(void) {      //Toggle a GPIO (FBD48 pin 23, PIO0_7, controls the LED on the LPC Expresso PCB)
- 
-     LPC_SYSCON->SYSAHBCLKCTRL   |= (1<<6);     //enable clock GPIO (sec 3.5.14)
-     LPC_IOCON->PIO0_7           &= ~(0x10);    //NOT REQUIRED, turn off pull up (sec 7.4.19)
-     LPC_GPIO0->DIR              |= (1<<7);     //set pin direction to output (sec 12.3.2)
+
+     init_GPIO();
+     set_DIR(21,OUTPUT);  
+     set_DIR(3,INPUT);             
      
-     unsigned int i = 0;
+     //unsigned int i = 0;
  
      while(1){                      //infinite loop
- 
-          LPC_GPIO0->DATA           |= (1<<7);    //set pin high (sec 12.3.1)
-          for(i=0; i<0xEEEEE; ++i);               //arbitrary delay
-          LPC_GPIO0->DATA           &= ~(1<<7);   //set pin low (sec 12.3.1)
-          for(i=0; i<0x55555; ++i);               //arbitrary delay
- 
+
+          if(read_digital_gpio(3)==HIGH){
+               write_digital_gpio(21,HIGH);     
+          }else{
+               write_digital_gpio(21,LOW);
+          }                  
      }
       return 0 ;
 }
