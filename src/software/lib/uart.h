@@ -3,5 +3,26 @@
 */
 #ifndef UART
 #define UART
+    #include <LPC11xx.h>    
 
+    /*
+        function: enable TX,RX and UART clock
+        parameters(0): -
+        return: - 
+    */
+   void init_UART();
+
+   /*
+        function: send data through RX
+        parameters(1): sequence of characters
+        return: -
+   */
+  void send_UART(char text);
+
+   /*
+        function: recive data through TX
+        parameters(1): -
+        return: sequence of characters
+   */
+  char* recv_UART();
 #endif

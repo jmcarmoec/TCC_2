@@ -21,19 +21,16 @@
 
 int main(void) {      //Toggle a GPIO (FBD48 pin 23, PIO0_7, controls the LED on the LPC Expresso PCB)
 
-     init_GPIO();
-     set_DIR(21,OUTPUT);  
-     set_DIR(3,INPUT);             
-     
+     init_GPIO();                     
+     init_UART();
+     set_DIR(3,INPUT);
      //unsigned int i = 0;
  
      while(1){                      //infinite loop
-
           if(read_digital_gpio(3)==HIGH){
-               write_digital_gpio(21,HIGH);     
-          }else{
-               write_digital_gpio(21,LOW);
-          }                  
+               send_UART('a');
+          }
+          
      }
       return 0 ;
 }

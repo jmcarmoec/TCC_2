@@ -75,8 +75,8 @@ clean:	tidy
 	rm -rf crt.o
 	rm -rf vtable.o
 	rm -rf SYSTEM~1.o
-	rm -rf ../lib/adc.o
-	rm -rf ../lib/gpio.o
-	rm -rf ../lib/pwm.o
-	rm -rf ../lib/timer.o
-	rm -rf ../lib/uart.o
+	rm -rf adc.o
+	rm -rf gpio.o
+	rm -rf pwm.o
+	rm -rf timer.o
+	rm -rf uart.o
