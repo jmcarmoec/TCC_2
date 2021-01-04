@@ -3,7 +3,7 @@
 */
 #ifndef UART
 #define UART
-    #include <LPC11xx.h>    
+    #include <LPC11xx.h>     
 
     /*
         function: enable TX,RX and UART clock
@@ -17,12 +17,14 @@
         parameters(1): sequence of characters
         return: -
    */
-  void send_UART(char text);
+  void send_UART(char data);
 
    /*
         function: recive data through TX
         parameters(1): -
         return: sequence of characters
    */
-  char* recv_UART();
+  unsigned int recv_UART(); //NOT READY
+
+  void printf_int(int value);
 #endif

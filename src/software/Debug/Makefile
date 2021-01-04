@@ -9,8 +9,9 @@ COMPILER = "GCC for ARM"
 TARGET = Debug
 
 ## Tools general options
-CCFLAGS=-gdwarf-2 -fomit-frame-pointer -Wall -fverbose-asm -MD -MP -fsigned-char -O0 -mcpu=cortex-m0 -mthumb -I../cmsis/core -I../cmsis/device -I../lib
-LDFLAGS=-mcpu=cortex-m0 -mthumb -nostartfiles
+CCFLAGS=-gdwarf-2 -fomit-frame-pointer -Wall -fverbose-asm -MD -MP -fsigned-char -O0 -mcpu=cortex-m0 -mthumb -I../cmsis/core -I../cmsis/device -I../lib 
+LDFLAGS=-mcpu=cortex-m0 -mthumb -nostartfiles -specs=nosys.specs
+
 
 ## Processing Tools
 CC=arm-none-eabi-gcc
