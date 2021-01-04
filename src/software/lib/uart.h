@@ -4,6 +4,9 @@
 #ifndef UART
 #define UART
     #include <LPC11xx.h>     
+    #include <math.h>
+
+     #define FLOAT_PRECISION 4
 
     /*
         function: enable TX,RX and UART clock
@@ -27,4 +30,7 @@
   unsigned int recv_UART(); //NOT READY
 
   void printf_int(int value);
+  void printf_string(char* string);
+  void printf_float(float value);
+
 #endif

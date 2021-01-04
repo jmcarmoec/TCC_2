@@ -9,8 +9,8 @@ void init_UART(){
     LPC_UART->TER                   |= 0x80;      //enable transmission (sec 13.5.16)    
 }
 void send_UART(char data){    
-    LPC_UART->THR = 0;
-    LPC_UART->THR = data;
+    LPC_UART->THR &= 0x00;
+    LPC_UART->THR |= data & 0xFF;
 }
 unsigned int recv_UART(){
     char data;
@@ -27,7 +27,7 @@ void printf_int(int value){
     while(aux!=0){        
         ++top;
         charSend=aux%10;        
-        array_values[top]=charSend;        ;
+        array_values[top]=charSend;
         aux/=10;
         
     }
@@ -35,4 +35,19 @@ void printf_int(int value){
         send_UART(array_values[top]+'0');
         top--;
     }
+}
+
+void printf_string(char* string){
+    for(int i=0;string[i]!=0;i++){
+        send_UART(string[i]);
+    }
+}
+
+void printf_float(float value){
+    int p_i = (int)value;
+    float p_d = value-p_i;
+    p_d*=1000;//3 casas decimais
+    printf_int(p_i);
+    send_UART('.');
+    printf_int(p_d);
 }

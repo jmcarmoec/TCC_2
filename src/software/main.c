@@ -28,8 +28,9 @@ int main(void) {      //Toggle a GPIO (FBD48 pin 23, PIO0_7, controls the LED on
  
      while(1){                      //infinite loop
           if(read_digital_gpio(3)==HIGH){
-               printf_int(1523);
-               break;                                
+               printf_int(123456789);
+               printf_string("ab|gv");
+               printf_float(12.5359);                                            
           }
           
      }
