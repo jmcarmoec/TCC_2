@@ -10,7 +10,8 @@ void init_UART(){
 }
 void send_UART(char data){    
     LPC_UART->THR &= 0x00;
-    LPC_UART->THR |= data & 0xFF;
+    LPC_UART->THR |= data;  
+    for(int i=0;i<0xFF1;i++);  
 }
 unsigned int recv_UART(){
     char data;

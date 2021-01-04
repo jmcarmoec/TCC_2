@@ -112,87 +112,87 @@ LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none
 LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a
 END GROUP
 
-.text           0x0000000000000000     0x1354
+.text           0x0000000000000000     0x1370
                 0x0000000000000000                _stext = .
  CREATE_OBJECT_SYMBOLS
  *(.vectors)
  .vectors       0x0000000000000000       0xc0 vtable.o
                 0x0000000000000000                gVectors
  *(.text)
- .text          0x00000000000000c0       0x44 main.o
+ .text          0x00000000000000c0       0x38 main.o
                 0x00000000000000c0                main
- .text          0x0000000000000104       0x70 crt.o
-                0x0000000000000108                ResetHandler
- .text          0x0000000000000174        0x8 vtable.o
-                0x0000000000000174                NMI_Handler
-                0x0000000000000176                HardFault_Handler
-                0x0000000000000178                IntDefaultHandler
- .text          0x000000000000017c      0x304 SYSTEM~1.o
-                0x0000000000000182                SystemCoreClockUpdate
-                0x00000000000003a4                SystemInit
- .text          0x0000000000000480      0x2bc gpio.o
-                0x0000000000000480                init_GPIO
-                0x0000000000000498                set_DIR
-                0x00000000000005b8                write_digital_gpio
-                0x00000000000006d4                read_digital_gpio
- .text          0x000000000000073c      0x1d8 uart.o
-                0x000000000000073c                init_UART
-                0x00000000000007b4                send_UART
-                0x00000000000007e8                recv_UART
-                0x0000000000000814                printf_int
-                0x0000000000000884                printf_string
-                0x00000000000008bc                printf_float
- .text          0x0000000000000914      0x114 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
-                0x0000000000000914                __udivsi3
-                0x0000000000000914                __aeabi_uidiv
-                0x0000000000000a20                __aeabi_uidivmod
- .text          0x0000000000000a28      0x1d4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
-                0x0000000000000a28                __aeabi_idiv
-                0x0000000000000a28                __divsi3
-                0x0000000000000bf4                __aeabi_idivmod
- .text          0x0000000000000bfc        0x4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
-                0x0000000000000bfc                __aeabi_ldiv0
-                0x0000000000000bfc                __aeabi_idiv0
- .text          0x0000000000000c00      0x234 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
-                0x0000000000000c00                __aeabi_fmul
- .text          0x0000000000000e34      0x390 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(subsf3.o)
-                0x0000000000000e34                __aeabi_fsub
- .text          0x00000000000011c4       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixsfsi.o)
-                0x00000000000011c4                __aeabi_f2iz
- .text          0x0000000000001204       0x8c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
-                0x0000000000001204                __aeabi_i2f
- .text          0x0000000000001290       0x3c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_clzsi2.o)
-                0x0000000000001290                __clzsi2
+ .text          0x00000000000000f8       0x70 crt.o
+                0x00000000000000fc                ResetHandler
+ .text          0x0000000000000168        0x8 vtable.o
+                0x0000000000000168                NMI_Handler
+                0x000000000000016a                HardFault_Handler
+                0x000000000000016c                IntDefaultHandler
+ .text          0x0000000000000170      0x304 SYSTEM~1.o
+                0x0000000000000176                SystemCoreClockUpdate
+                0x0000000000000398                SystemInit
+ .text          0x0000000000000474      0x2bc gpio.o
+                0x0000000000000474                init_GPIO
+                0x000000000000048c                set_DIR
+                0x00000000000005ac                write_digital_gpio
+                0x00000000000006c8                read_digital_gpio
+ .text          0x0000000000000730      0x1ec uart.o
+                0x0000000000000730                init_UART
+                0x00000000000007a8                send_UART
+                0x00000000000007f0                recv_UART
+                0x000000000000081c                printf_int
+                0x000000000000088c                printf_string
+                0x00000000000008c4                printf_float
+ .text          0x000000000000091c      0x114 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x000000000000091c                __udivsi3
+                0x000000000000091c                __aeabi_uidiv
+                0x0000000000000a28                __aeabi_uidivmod
+ .text          0x0000000000000a30      0x1d4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+                0x0000000000000a30                __aeabi_idiv
+                0x0000000000000a30                __divsi3
+                0x0000000000000bfc                __aeabi_idivmod
+ .text          0x0000000000000c04        0x4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000c04                __aeabi_ldiv0
+                0x0000000000000c04                __aeabi_idiv0
+ .text          0x0000000000000c08      0x234 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
+                0x0000000000000c08                __aeabi_fmul
+ .text          0x0000000000000e3c      0x390 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(subsf3.o)
+                0x0000000000000e3c                __aeabi_fsub
+ .text          0x00000000000011cc       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixsfsi.o)
+                0x00000000000011cc                __aeabi_f2iz
+ .text          0x000000000000120c       0x8c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
+                0x000000000000120c                __aeabi_i2f
+ .text          0x0000000000001298       0x3c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_clzsi2.o)
+                0x0000000000001298                __clzsi2
  *(.text.*)
-                0x00000000000012cc                . = ALIGN (0x4)
+                0x00000000000012d4                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x00000000000012cc        0x6 main.o
- *fill*         0x00000000000012d2        0x2 00000000
- .rodata        0x00000000000012d4       0x40 SYSTEM~1.o
- .rodata        0x0000000000001314       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
+ .rodata        0x00000000000012d4       0x1b main.o
+ *fill*         0x00000000000012ef        0x1 00000000
+ .rodata        0x00000000000012f0       0x40 SYSTEM~1.o
+ .rodata        0x0000000000001330       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(mulsf3.o)
  *(.rodata.*)
-                0x0000000000001354                . = ALIGN (0x4)
-                0x0000000000001354                _etext = .
+                0x0000000000001370                . = ALIGN (0x4)
+                0x0000000000001370                _etext = .
 
-.glue_7         0x0000000000001354        0x0
- .glue_7        0x0000000000001354        0x0 linker stubs
+.glue_7         0x0000000000001370        0x0
+ .glue_7        0x0000000000001370        0x0 linker stubs
 
-.glue_7t        0x0000000000001354        0x0
- .glue_7t       0x0000000000001354        0x0 linker stubs
+.glue_7t        0x0000000000001370        0x0
+ .glue_7t       0x0000000000001370        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000001354        0x0
- .vfp11_veneer  0x0000000000001354        0x0 linker stubs
+.vfp11_veneer   0x0000000000001370        0x0
+ .vfp11_veneer  0x0000000000001370        0x0 linker stubs
 
-.v4_bx          0x0000000000001354        0x0
- .v4_bx         0x0000000000001354        0x0 linker stubs
+.v4_bx          0x0000000000001370        0x0
+ .v4_bx         0x0000000000001370        0x0 linker stubs
 
-.iplt           0x0000000000001354        0x0
- .iplt          0x0000000000001354        0x0 main.o
+.iplt           0x0000000000001370        0x0
+ .iplt          0x0000000000001370        0x0 main.o
 
-.rel.dyn        0x0000000000001354        0x0
- .rel.iplt      0x0000000000001354        0x0 main.o
+.rel.dyn        0x0000000000001370        0x0
+ .rel.iplt      0x0000000000001370        0x0 main.o
 
-.data           0x0000000010000000        0x4 load address 0x0000000000001354
+.data           0x0000000010000000        0x4 load address 0x0000000000001370
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sdata = .
  *(.data)
@@ -205,7 +205,7 @@ END GROUP
                 0x0000000010000004                . = ALIGN (0x4)
                 0x0000000010000004                _edata = .
 
-.igot.plt       0x0000000010000004        0x0 load address 0x0000000000001358
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000001374
  .igot.plt      0x0000000010000004        0x0 main.o
 
 .bss            0x0000000010000004        0x0
@@ -219,13 +219,13 @@ END GROUP
 OUTPUT(Debug.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x0000000000000000     0x35a7
+.debug_info     0x0000000000000000     0x35be
  .debug_info    0x0000000000000000      0xa73 main.o
  .debug_info    0x0000000000000a73      0x13c crt.o
  .debug_info    0x0000000000000baf       0xb9 vtable.o
  .debug_info    0x0000000000000c68      0x4ed SYSTEM~1.o
  .debug_info    0x0000000000001155     0x1007 gpio.o
- .debug_info    0x000000000000215c     0x144b uart.o
+ .debug_info    0x000000000000215c     0x1462 uart.o
 
 .debug_abbrev   0x0000000000000000      0x8ef
  .debug_abbrev  0x0000000000000000      0x1d6 main.o
@@ -256,13 +256,13 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000000000a0       0x20 uart.o
 
-.debug_line     0x0000000000000000      0xce9
- .debug_line    0x0000000000000000      0x20c main.o
- .debug_line    0x000000000000020c      0x13f crt.o
- .debug_line    0x000000000000034b       0x55 vtable.o
- .debug_line    0x00000000000003a0      0x361 SYSTEM~1.o
- .debug_line    0x0000000000000701      0x327 gpio.o
- .debug_line    0x0000000000000a28      0x2c1 uart.o
+.debug_line     0x0000000000000000      0xcf6
+ .debug_line    0x0000000000000000      0x20b main.o
+ .debug_line    0x000000000000020b      0x13f crt.o
+ .debug_line    0x000000000000034a       0x55 vtable.o
+ .debug_line    0x000000000000039f      0x361 SYSTEM~1.o
+ .debug_line    0x0000000000000700      0x327 gpio.o
+ .debug_line    0x0000000000000a27      0x2cf uart.o
 
 .debug_str      0x0000000000000000      0xb12
  .debug_str     0x0000000000000000      0x536 main.o
@@ -398,7 +398,6 @@ main                                              main.o
 printf_float                                      uart.o
                                                   main.o
 printf_int                                        uart.o
-                                                  main.o
 printf_string                                     uart.o
                                                   main.o
 read_digital_gpio                                 gpio.o
