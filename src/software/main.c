@@ -25,10 +25,9 @@ int main(void) {
      set_DIR(3,INPUT);        
      while(1){
           if(read_digital_gpio(3)==HIGH){
-               printf_string("Ta funcionando nessa merda");           
-               printf_float(1586.458);
-          }
-          
+               printf_float(1569.587416);  
+               break;  
+          }          
      }
       return 0 ;
 }

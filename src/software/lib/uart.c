@@ -47,7 +47,7 @@ void printf_string(char* string){
 void printf_float(float value){
     int p_i = (int)value;
     float p_d = value-p_i;
-    p_d*=1000;//3 casas decimais
+    p_d*=pow(10,FLOAT_PRECISION);
     printf_int(p_i);
     send_UART('.');
     printf_int(p_d);

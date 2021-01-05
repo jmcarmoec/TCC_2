@@ -6,7 +6,7 @@
     #include <LPC11xx.h>     
     #include <math.h>
 
-     #define FLOAT_PRECISION 4
+     #define FLOAT_PRECISION 6
 
     /*
         function: enable TX,RX and UART clock
