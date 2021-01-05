@@ -1,1 +1,0 @@
-vtable.o: ../vtable.c
