@@ -19,15 +19,22 @@
 
 
 int main(void) {
-
-     init_GPIO();                     
-     init_UART();
-     set_DIR(3,INPUT);        
-     while(1){
-          if(read_digital_gpio(3)==HIGH){
-               printf_float(1569.587416);  
-               break;  
-          }          
+      init_GPIO();                     
+      init_UART();
+      init_ADC();
+      LPC_IOCON->JTAG_TDI_PIO0_11    &= 0xFFFFFF78;
+      LPC_IOCON->JTAG_TDI_PIO0_11    |= (1<<2);
+      LPC_ADC->CR                    = 0x0001;      
+     while(1){     
+      //printf_string("start");      
+      LPC_ADC->CR     |= (1<<24);                            
+      while((LPC_ADC->DR[0] < 0x7FFFFFFF)); 
+      int value = ( LPC_ADC->DR[0] & 0xFFC0) >> 8;
+      printf_int(LPC_ADC->DR[0]);      
+      for (int i = 0; i < 2*0xFFFF; i++);       
+      //break;
+      //printf_string("done");      
+      //break;
      }
       return 0 ;
 }

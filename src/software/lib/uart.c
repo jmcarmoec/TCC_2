@@ -21,6 +21,13 @@ unsigned int recv_UART(){
 }
 
 void printf_int(int value){
+    if(value<0){
+        send_UART('-');
+        value*=-1;
+    }
+    if(value==0){
+        send_UART('0');        
+    }
     int top=-1;
     int array_values[30];   
     int aux = value;
@@ -33,7 +40,12 @@ void printf_int(int value){
         
     }
     while (top>=0){
-        send_UART(array_values[top]+'0');
+        if(array_values[top]!=0){
+            send_UART(array_values[top]+'0');
+        }else{
+            send_UART('0');
+        }
+        
         top--;
     }
 }
@@ -45,10 +57,17 @@ void printf_string(char* string){
 }
 
 void printf_float(float value){
-    int p_i = (int)value;
-    float p_d = value-p_i;
-    p_d*=pow(10,FLOAT_PRECISION);
-    printf_int(p_i);
-    send_UART('.');
-    printf_int(p_d);
+    if(value!=0){
+        int p_i = (int)value;
+        float p_d = value-p_i;
+        p_d*=pow(10,FLOAT_PRECISION);
+        printf_int(p_i);
+        send_UART('.');
+        if(p_d<0){
+            p_d *=-1;
+        }
+        printf_int(p_d);
+    }else{
+        printf_string("0.0");
+    }
 }

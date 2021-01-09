@@ -3,5 +3,16 @@
 */
 #ifndef ADC
 #define ADC
+    #include <LPC11xx.h>     
 
+    #define AD0 0 // NOT CONFIGURED
+    #define AD1 1
+    #define AD2 2
+    #define AD3 3
+    #define AD4 4
+    #define AD5 5 // NOT CONFIGURED
+
+    void init_ADC();
+    void start_adc(int AD);
+    
 #endif
