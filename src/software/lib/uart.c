@@ -60,14 +60,25 @@ void printf_float(float value){
     if(value!=0){
         int p_i = (int)value;
         float p_d = value-p_i;
-        p_d*=pow(10,FLOAT_PRECISION);
+        p_d*=expoente(10,FLOAT_PRECISION);
         printf_int(p_i);
         send_UART('.');
         if(p_d<0){
             p_d *=-1;
-        }
-        printf_int(p_d);
+        }        
+        for(int i=FLOAT_PRECISION;i>0;i--){
+            printf_int(p_d/expoente(10,i-1));
+            p_d = (int)p_d % (int)expoente(10,i-1);
+        }        
     }else{
         printf_string("0.0");
     }
+}
+
+double expoente(double base,double expoente){
+    float ac =1;
+    for(int i=0;i<expoente;i++){
+        ac*=base;
+    }
+    return ac;
 }

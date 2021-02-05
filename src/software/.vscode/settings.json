@@ -2,6 +2,10 @@
     "files.associations": {
         "cmath": "cpp",
         "limits": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "adc.h": "c",
+        "lpc11xx.h": "c",
+        "uart.h": "c",
+        "string.h": "c"
     }
 }
