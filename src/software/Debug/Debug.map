@@ -23,7 +23,7 @@ Archive member included to satisfy reference by file (symbol)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
                               uart.o (__aeabi_i2f)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
-                              main.o (__aeabi_ddiv)
+                              uart.o (__aeabi_ddiv)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(eqdf2.o)
                               /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o) (__eqdf2)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(gedf2.o)
@@ -31,15 +31,15 @@ Archive member included to satisfy reference by file (symbol)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(ledf2.o)
                               /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o) (__ledf2)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
-                              main.o (__aeabi_dmul)
+                              uart.o (__aeabi_dmul)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
                               uart.o (__aeabi_d2iz)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsidf.o)
-                              main.o (__aeabi_i2d)
+                              uart.o (__aeabi_i2d)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(extendsfdf2.o)
                               uart.o (__aeabi_f2d)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(truncdfsf2.o)
-                              main.o (__aeabi_d2f)
+                              uart.o (__aeabi_d2f)
 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_clzsi2.o)
                               /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(subsf3.o) (__clzsi2)
 
@@ -70,22 +70,33 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 gpio.o
  .data          0x0000000000000000        0x0 adc.o
  .bss           0x0000000000000000        0x0 adc.o
- .text          0x0000000000000000        0x0 pwm.o
+ .text          0x0000000000000000       0x40 pwm.o
  .data          0x0000000000000000        0x0 pwm.o
  .bss           0x0000000000000000        0x0 pwm.o
- .debug_line    0x0000000000000000        0x0 pwm.o
- .debug_str     0x0000000000000000       0xc2 pwm.o
+ .debug_info    0x0000000000000000      0x7e1 pwm.o
+ .debug_abbrev  0x0000000000000000       0xd3 pwm.o
+ .debug_aranges
+                0x0000000000000000       0x20 pwm.o
+ .debug_line    0x0000000000000000      0x13c pwm.o
+ .debug_str     0x0000000000000000      0x566 pwm.o
  .comment       0x0000000000000000       0x4d pwm.o
+ .debug_frame   0x0000000000000000       0x20 pwm.o
  .ARM.attributes
-                0x0000000000000000       0x31 pwm.o
- .text          0x0000000000000000        0x0 timer.o
+                0x0000000000000000       0x2c pwm.o
+ .text          0x0000000000000000       0x60 timer.o
  .data          0x0000000000000000        0x0 timer.o
  .bss           0x0000000000000000        0x0 timer.o
- .debug_line    0x0000000000000000        0x0 timer.o
- .debug_str     0x0000000000000000       0xc4 timer.o
+ .debug_info    0x0000000000000000      0x645 timer.o
+ .debug_abbrev  0x0000000000000000      0x111 timer.o
+ .debug_loc     0x0000000000000000       0x20 timer.o
+ .debug_aranges
+                0x0000000000000000       0x20 timer.o
+ .debug_line    0x0000000000000000      0x171 timer.o
+ .debug_str     0x0000000000000000      0x425 timer.o
  .comment       0x0000000000000000       0x4d timer.o
+ .debug_frame   0x0000000000000000       0x34 timer.o
  .ARM.attributes
-                0x0000000000000000       0x31 timer.o
+                0x0000000000000000       0x2c timer.o
  .data          0x0000000000000000        0x0 uart.o
  .bss           0x0000000000000000        0x0 uart.o
  .data          0x0000000000000000        0x0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
@@ -158,140 +169,140 @@ LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none
 LOAD /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a
 END GROUP
 
-.text           0x0000000000000000     0x2648
+.text           0x0000000000000000     0x2644
                 0x0000000000000000                _stext = .
  CREATE_OBJECT_SYMBOLS
  *(.vectors)
  .vectors       0x0000000000000000       0xc0 vtable.o
                 0x0000000000000000                gVectors
  *(.text)
- .text          0x00000000000000c0       0x7c main.o
+ .text          0x00000000000000c0       0x90 main.o
                 0x00000000000000c0                main
- .text          0x000000000000013c       0x70 crt.o
-                0x0000000000000140                ResetHandler
- .text          0x00000000000001ac        0x8 vtable.o
-                0x00000000000001ac                NMI_Handler
-                0x00000000000001ae                HardFault_Handler
-                0x00000000000001b0                IntDefaultHandler
- .text          0x00000000000001b4      0x304 SYSTEM~1.o
-                0x00000000000001ba                SystemCoreClockUpdate
-                0x00000000000003dc                SystemInit
- .text          0x00000000000004b8      0x2bc gpio.o
-                0x00000000000004b8                init_GPIO
-                0x00000000000004d0                set_DIR
-                0x00000000000005f0                write_digital_gpio
-                0x000000000000070c                read_digital_gpio
- .text          0x0000000000000774      0x15c adc.o
-                0x0000000000000774                init_ADC
-                0x00000000000007a4                start_ADC
-                0x0000000000000868                select_ADC_channel
-                0x000000000000088c                read_ADC
- .text          0x00000000000008d0      0x360 uart.o
-                0x00000000000008d0                init_UART
-                0x0000000000000948                send_UART
-                0x0000000000000990                recv_UART
-                0x00000000000009bc                printf_int
-                0x0000000000000a5e                printf_string
-                0x0000000000000a96                printf_float
-                0x0000000000000bcc                expoente
- .text          0x0000000000000c30      0x114 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
-                0x0000000000000c30                __udivsi3
-                0x0000000000000c30                __aeabi_uidiv
-                0x0000000000000d3c                __aeabi_uidivmod
- .text          0x0000000000000d44      0x1d4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
-                0x0000000000000d44                __aeabi_idiv
-                0x0000000000000d44                __divsi3
-                0x0000000000000f10                __aeabi_idivmod
- .text          0x0000000000000f18        0x4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
-                0x0000000000000f18                __aeabi_ldiv0
-                0x0000000000000f18                __aeabi_idiv0
- .text          0x0000000000000f1c       0x7c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o)
-                0x0000000000000f1c                __aeabi_cdrcmple
-                0x0000000000000f2c                __aeabi_cdcmple
-                0x0000000000000f2c                __aeabi_cdcmpeq
-                0x0000000000000f3c                __aeabi_dcmpeq
-                0x0000000000000f48                __aeabi_dcmplt
-                0x0000000000000f5c                __aeabi_dcmple
-                0x0000000000000f70                __aeabi_dcmpgt
-                0x0000000000000f84                __aeabi_dcmpge
- .text          0x0000000000000f98       0x74 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpsf2.o)
-                0x0000000000000f98                __aeabi_cfrcmple
-                0x0000000000000fa0                __aeabi_cfcmple
-                0x0000000000000fa0                __aeabi_cfcmpeq
-                0x0000000000000fb0                __aeabi_fcmpeq
-                0x0000000000000fbc                __aeabi_fcmplt
-                0x0000000000000fd0                __aeabi_fcmple
-                0x0000000000000fe4                __aeabi_fcmpgt
-                0x0000000000000ff8                __aeabi_fcmpge
- .text          0x000000000000100c       0x50 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(eqsf2.o)
-                0x000000000000100c                __nesf2
-                0x000000000000100c                __eqsf2
- .text          0x000000000000105c       0x98 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(gesf2.o)
-                0x000000000000105c                __gtsf2
-                0x000000000000105c                __gesf2
- .text          0x00000000000010f4       0x94 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(lesf2.o)
-                0x00000000000010f4                __lesf2
-                0x00000000000010f4                __ltsf2
- .text          0x0000000000001188      0x390 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(subsf3.o)
-                0x0000000000001188                __aeabi_fsub
- .text          0x0000000000001518       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixsfsi.o)
-                0x0000000000001518                __aeabi_f2iz
- .text          0x0000000000001558       0x8c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
-                0x0000000000001558                __aeabi_i2f
- .text          0x00000000000015e4      0x5d0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
-                0x00000000000015e4                __aeabi_ddiv
- .text          0x0000000000001bb4       0x78 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(eqdf2.o)
-                0x0000000000001bb4                __eqdf2
-                0x0000000000001bb4                __nedf2
- .text          0x0000000000001c2c       0xe4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(gedf2.o)
-                0x0000000000001c2c                __gtdf2
-                0x0000000000001c2c                __gedf2
- .text          0x0000000000001d10       0xe0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(ledf2.o)
-                0x0000000000001d10                __ltdf2
-                0x0000000000001d10                __ledf2
- .text          0x0000000000001df0      0x4d8 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
-                0x0000000000001df0                __aeabi_dmul
- .text          0x00000000000022c8       0x6c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
-                0x00000000000022c8                __aeabi_d2iz
- .text          0x0000000000002334       0x60 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsidf.o)
-                0x0000000000002334                __aeabi_i2d
- .text          0x0000000000002394       0x90 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(extendsfdf2.o)
-                0x0000000000002394                __aeabi_f2d
- .text          0x0000000000002424      0x110 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(truncdfsf2.o)
-                0x0000000000002424                __aeabi_d2f
- .text          0x0000000000002534       0x3c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_clzsi2.o)
-                0x0000000000002534                __clzsi2
+ .text          0x0000000000000150       0x70 crt.o
+                0x0000000000000154                ResetHandler
+ .text          0x00000000000001c0        0x8 vtable.o
+                0x00000000000001c0                NMI_Handler
+                0x00000000000001c2                HardFault_Handler
+                0x00000000000001c4                IntDefaultHandler
+ .text          0x00000000000001c8      0x304 SYSTEM~1.o
+                0x00000000000001ce                SystemCoreClockUpdate
+                0x00000000000003f0                SystemInit
+ .text          0x00000000000004cc      0x2bc gpio.o
+                0x00000000000004cc                init_GPIO
+                0x00000000000004e4                set_DIR
+                0x0000000000000604                write_digital_gpio
+                0x0000000000000720                read_digital_gpio
+ .text          0x0000000000000788      0x15c adc.o
+                0x0000000000000788                init_ADC
+                0x00000000000007b8                start_ADC
+                0x000000000000087c                select_ADC_channel
+                0x00000000000008a0                read_ADC
+ .text          0x00000000000008e4      0x348 uart.o
+                0x00000000000008e4                init_UART
+                0x000000000000095c                send_UART
+                0x000000000000098c                recv_UART
+                0x00000000000009b8                printf_int
+                0x0000000000000a5a                printf_string
+                0x0000000000000a92                printf_float
+                0x0000000000000bc8                expoente
+ .text          0x0000000000000c2c      0x114 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_udivsi3.o)
+                0x0000000000000c2c                __udivsi3
+                0x0000000000000c2c                __aeabi_uidiv
+                0x0000000000000d38                __aeabi_uidivmod
+ .text          0x0000000000000d40      0x1d4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
+                0x0000000000000d40                __aeabi_idiv
+                0x0000000000000d40                __divsi3
+                0x0000000000000f0c                __aeabi_idivmod
+ .text          0x0000000000000f14        0x4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000f14                __aeabi_ldiv0
+                0x0000000000000f14                __aeabi_idiv0
+ .text          0x0000000000000f18       0x7c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o)
+                0x0000000000000f18                __aeabi_cdrcmple
+                0x0000000000000f28                __aeabi_cdcmple
+                0x0000000000000f28                __aeabi_cdcmpeq
+                0x0000000000000f38                __aeabi_dcmpeq
+                0x0000000000000f44                __aeabi_dcmplt
+                0x0000000000000f58                __aeabi_dcmple
+                0x0000000000000f6c                __aeabi_dcmpgt
+                0x0000000000000f80                __aeabi_dcmpge
+ .text          0x0000000000000f94       0x74 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpsf2.o)
+                0x0000000000000f94                __aeabi_cfrcmple
+                0x0000000000000f9c                __aeabi_cfcmple
+                0x0000000000000f9c                __aeabi_cfcmpeq
+                0x0000000000000fac                __aeabi_fcmpeq
+                0x0000000000000fb8                __aeabi_fcmplt
+                0x0000000000000fcc                __aeabi_fcmple
+                0x0000000000000fe0                __aeabi_fcmpgt
+                0x0000000000000ff4                __aeabi_fcmpge
+ .text          0x0000000000001008       0x50 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(eqsf2.o)
+                0x0000000000001008                __nesf2
+                0x0000000000001008                __eqsf2
+ .text          0x0000000000001058       0x98 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(gesf2.o)
+                0x0000000000001058                __gtsf2
+                0x0000000000001058                __gesf2
+ .text          0x00000000000010f0       0x94 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(lesf2.o)
+                0x00000000000010f0                __lesf2
+                0x00000000000010f0                __ltsf2
+ .text          0x0000000000001184      0x390 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(subsf3.o)
+                0x0000000000001184                __aeabi_fsub
+ .text          0x0000000000001514       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixsfsi.o)
+                0x0000000000001514                __aeabi_f2iz
+ .text          0x0000000000001554       0x8c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
+                0x0000000000001554                __aeabi_i2f
+ .text          0x00000000000015e0      0x5d0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
+                0x00000000000015e0                __aeabi_ddiv
+ .text          0x0000000000001bb0       0x78 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(eqdf2.o)
+                0x0000000000001bb0                __eqdf2
+                0x0000000000001bb0                __nedf2
+ .text          0x0000000000001c28       0xe4 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(gedf2.o)
+                0x0000000000001c28                __gtdf2
+                0x0000000000001c28                __gedf2
+ .text          0x0000000000001d0c       0xe0 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(ledf2.o)
+                0x0000000000001d0c                __ltdf2
+                0x0000000000001d0c                __ledf2
+ .text          0x0000000000001dec      0x4d8 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
+                0x0000000000001dec                __aeabi_dmul
+ .text          0x00000000000022c4       0x6c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
+                0x00000000000022c4                __aeabi_d2iz
+ .text          0x0000000000002330       0x60 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsidf.o)
+                0x0000000000002330                __aeabi_i2d
+ .text          0x0000000000002390       0x90 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(extendsfdf2.o)
+                0x0000000000002390                __aeabi_f2d
+ .text          0x0000000000002420      0x110 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(truncdfsf2.o)
+                0x0000000000002420                __aeabi_d2f
+ .text          0x0000000000002530       0x3c /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_clzsi2.o)
+                0x0000000000002530                __clzsi2
  *(.text.*)
-                0x0000000000002570                . = ALIGN (0x4)
+                0x000000000000256c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000000002570       0x40 SYSTEM~1.o
- .rodata        0x00000000000025b0       0x14 adc.o
- .rodata        0x00000000000025c4        0x4 uart.o
- .rodata        0x00000000000025c8       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
- .rodata        0x0000000000002608       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
+ .rodata        0x000000000000256c       0x40 SYSTEM~1.o
+ .rodata        0x00000000000025ac       0x14 adc.o
+ .rodata        0x00000000000025c0        0x4 uart.o
+ .rodata        0x00000000000025c4       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
+ .rodata        0x0000000000002604       0x40 /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
  *(.rodata.*)
-                0x0000000000002648                . = ALIGN (0x4)
-                0x0000000000002648                _etext = .
+                0x0000000000002644                . = ALIGN (0x4)
+                0x0000000000002644                _etext = .
 
-.glue_7         0x0000000000002648        0x0
- .glue_7        0x0000000000002648        0x0 linker stubs
+.glue_7         0x0000000000002644        0x0
+ .glue_7        0x0000000000002644        0x0 linker stubs
 
-.glue_7t        0x0000000000002648        0x0
- .glue_7t       0x0000000000002648        0x0 linker stubs
+.glue_7t        0x0000000000002644        0x0
+ .glue_7t       0x0000000000002644        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000002648        0x0
- .vfp11_veneer  0x0000000000002648        0x0 linker stubs
+.vfp11_veneer   0x0000000000002644        0x0
+ .vfp11_veneer  0x0000000000002644        0x0 linker stubs
 
-.v4_bx          0x0000000000002648        0x0
- .v4_bx         0x0000000000002648        0x0 linker stubs
+.v4_bx          0x0000000000002644        0x0
+ .v4_bx         0x0000000000002644        0x0 linker stubs
 
-.iplt           0x0000000000002648        0x0
- .iplt          0x0000000000002648        0x0 main.o
+.iplt           0x0000000000002644        0x0
+ .iplt          0x0000000000002644        0x0 main.o
 
-.rel.dyn        0x0000000000002648        0x0
- .rel.iplt      0x0000000000002648        0x0 main.o
+.rel.dyn        0x0000000000002644        0x0
+ .rel.iplt      0x0000000000002644        0x0 main.o
 
-.data           0x0000000010000000        0x4 load address 0x0000000000002648
+.data           0x0000000010000000        0x4 load address 0x0000000000002644
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _sdata = .
  *(.data)
@@ -304,7 +315,7 @@ END GROUP
                 0x0000000010000004                . = ALIGN (0x4)
                 0x0000000010000004                _edata = .
 
-.igot.plt       0x0000000010000004        0x0 load address 0x000000000000264c
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000002648
  .igot.plt      0x0000000010000004        0x0 main.o
 
 .bss            0x0000000010000004        0x0
@@ -318,31 +329,31 @@ END GROUP
 OUTPUT(Debug.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_info     0x0000000000000000     0x406d
- .debug_info    0x0000000000000000      0xa8b main.o
- .debug_info    0x0000000000000a8b      0x13c crt.o
- .debug_info    0x0000000000000bc7       0xb9 vtable.o
- .debug_info    0x0000000000000c80      0x54d SYSTEM~1.o
- .debug_info    0x00000000000011cd     0x1067 gpio.o
- .debug_info    0x0000000000002234      0x8ee adc.o
- .debug_info    0x0000000000002b22     0x154b uart.o
+.debug_info     0x0000000000000000     0x48ac
+ .debug_info    0x0000000000000000     0x12e1 main.o
+ .debug_info    0x00000000000012e1      0x13c crt.o
+ .debug_info    0x000000000000141d       0xb9 vtable.o
+ .debug_info    0x00000000000014d6      0x54d SYSTEM~1.o
+ .debug_info    0x0000000000001a23     0x1067 gpio.o
+ .debug_info    0x0000000000002a8a      0x8ee adc.o
+ .debug_info    0x0000000000003378     0x1534 uart.o
 
-.debug_abbrev   0x0000000000000000      0xa65
- .debug_abbrev  0x0000000000000000      0x1f0 main.o
- .debug_abbrev  0x00000000000001f0       0x9c crt.o
- .debug_abbrev  0x000000000000028c       0x88 vtable.o
- .debug_abbrev  0x0000000000000314       0xef SYSTEM~1.o
- .debug_abbrev  0x0000000000000403      0x265 gpio.o
- .debug_abbrev  0x0000000000000668      0x13e adc.o
- .debug_abbrev  0x00000000000007a6      0x2bf uart.o
+.debug_abbrev   0x0000000000000000      0xa72
+ .debug_abbrev  0x0000000000000000      0x1fd main.o
+ .debug_abbrev  0x00000000000001fd       0x9c crt.o
+ .debug_abbrev  0x0000000000000299       0x88 vtable.o
+ .debug_abbrev  0x0000000000000321       0xef SYSTEM~1.o
+ .debug_abbrev  0x0000000000000410      0x265 gpio.o
+ .debug_abbrev  0x0000000000000675      0x13e adc.o
+ .debug_abbrev  0x00000000000007b3      0x2bf uart.o
 
-.debug_loc      0x0000000000000000      0x285
- .debug_loc     0x0000000000000000       0x2c main.o
- .debug_loc     0x000000000000002c       0x2c crt.o
- .debug_loc     0x0000000000000058       0x58 SYSTEM~1.o
- .debug_loc     0x00000000000000b0       0x84 gpio.o
- .debug_loc     0x0000000000000134       0x60 adc.o
- .debug_loc     0x0000000000000194       0xf1 uart.o
+.debug_loc      0x0000000000000000      0x279
+ .debug_loc     0x0000000000000000       0x20 main.o
+ .debug_loc     0x0000000000000020       0x2c crt.o
+ .debug_loc     0x000000000000004c       0x58 SYSTEM~1.o
+ .debug_loc     0x00000000000000a4       0x84 gpio.o
+ .debug_loc     0x0000000000000128       0x60 adc.o
+ .debug_loc     0x0000000000000188       0xf1 uart.o
 
 .debug_aranges  0x0000000000000000       0xe0
  .debug_aranges
@@ -360,29 +371,29 @@ LOAD linker stubs
  .debug_aranges
                 0x00000000000000c0       0x20 uart.o
 
-.debug_line     0x0000000000000000      0xf59
- .debug_line    0x0000000000000000      0x21c main.o
- .debug_line    0x000000000000021c      0x13f crt.o
- .debug_line    0x000000000000035b       0x55 vtable.o
- .debug_line    0x00000000000003b0      0x361 SYSTEM~1.o
- .debug_line    0x0000000000000711      0x327 gpio.o
- .debug_line    0x0000000000000a38      0x19b adc.o
- .debug_line    0x0000000000000bd3      0x386 uart.o
+.debug_line     0x0000000000000000      0xf7b
+ .debug_line    0x0000000000000000      0x252 main.o
+ .debug_line    0x0000000000000252      0x13f crt.o
+ .debug_line    0x0000000000000391       0x55 vtable.o
+ .debug_line    0x00000000000003e6      0x361 SYSTEM~1.o
+ .debug_line    0x0000000000000747      0x327 gpio.o
+ .debug_line    0x0000000000000a6e      0x19b adc.o
+ .debug_line    0x0000000000000c09      0x372 uart.o
 
-.debug_str      0x0000000000000000      0xb89
- .debug_str     0x0000000000000000      0x536 main.o
-                                        0x5a4 (size before relaxing)
- .debug_str     0x0000000000000536       0x5c crt.o
+.debug_str      0x0000000000000000      0xba3
+ .debug_str     0x0000000000000000      0x943 main.o
+                                        0x9b1 (size before relaxing)
+ .debug_str     0x0000000000000943       0x5c crt.o
                                         0x1a9 (size before relaxing)
- .debug_str     0x0000000000000592       0x45 vtable.o
+ .debug_str     0x000000000000099f       0x45 vtable.o
                                         0x121 (size before relaxing)
- .debug_str     0x00000000000005d7      0x2c1 SYSTEM~1.o
+ .debug_str     0x00000000000009e4       0x45 SYSTEM~1.o
                                         0x429 (size before relaxing)
- .debug_str     0x0000000000000898       0x82 gpio.o
+ .debug_str     0x0000000000000a29       0x82 gpio.o
                                         0x848 (size before relaxing)
- .debug_str     0x000000000000091a      0x1c9 adc.o
+ .debug_str     0x0000000000000aab       0x52 adc.o
                                         0x5a7 (size before relaxing)
- .debug_str     0x0000000000000ae3       0xa6 uart.o
+ .debug_str     0x0000000000000afd       0xa6 uart.o
                                         0xa45 (size before relaxing)
 
 .comment        0x0000000000000000       0x4c
@@ -503,7 +514,6 @@ __aeabi_cfcmple                                   /home/joaomateus/gcc-arm-none-
 __aeabi_cfrcmple                                  /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpsf2.o)
 __aeabi_d2f                                       /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(truncdfsf2.o)
                                                   uart.o
-                                                  main.o
 __aeabi_d2iz                                      /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixdfsi.o)
                                                   uart.o
 __aeabi_dcmpeq                                    /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o)
@@ -514,10 +524,8 @@ __aeabi_dcmple                                    /home/joaomateus/gcc-arm-none-
 __aeabi_dcmplt                                    /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_arm_cmpdf2.o)
 __aeabi_ddiv                                      /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(divdf3.o)
                                                   uart.o
-                                                  main.o
 __aeabi_dmul                                      /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(muldf3.o)
                                                   uart.o
-                                                  main.o
 __aeabi_f2d                                       /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(extendsfdf2.o)
                                                   uart.o
 __aeabi_f2iz                                      /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(fixsfsi.o)
@@ -533,7 +541,6 @@ __aeabi_fsub                                      /home/joaomateus/gcc-arm-none-
                                                   uart.o
 __aeabi_i2d                                       /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsidf.o)
                                                   uart.o
-                                                  main.o
 __aeabi_i2f                                       /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(floatsisf.o)
                                                   uart.o
 __aeabi_idiv                                      /home/joaomateus/gcc-arm-none-eabi-9-2020-q2-update/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v6-m/nofp/libgcc.a(_divsi3.o)
@@ -591,28 +598,28 @@ _etext                                            crt.o
 _sbss                                             crt.o
 _sdata                                            crt.o
 _stext                                            crt.o
+delay_MS                                          timer.o
 expoente                                          uart.o
 gVectors                                          vtable.o
 init_ADC                                          adc.o
                                                   main.o
 init_GPIO                                         gpio.o
                                                   main.o
+init_PWM                                          pwm.o
+init_TIMER_0                                      timer.o
 init_UART                                         uart.o
                                                   main.o
 main                                              main.o
                                                   crt.o
 printf_float                                      uart.o
-                                                  main.o
 printf_int                                        uart.o
+                                                  main.o
 printf_string                                     uart.o
 read_ADC                                          adc.o
-                                                  main.o
 read_digital_gpio                                 gpio.o
 recv_UART                                         uart.o
 select_ADC_channel                                adc.o
-                                                  main.o
 send_UART                                         uart.o
 set_DIR                                           gpio.o
 start_ADC                                         adc.o
-                                                  main.o
 write_digital_gpio                                gpio.o

@@ -6,6 +6,9 @@
         "adc.h": "c",
         "lpc11xx.h": "c",
         "uart.h": "c",
-        "string.h": "c"
+        "string.h": "c",
+        "pwm.h": "c",
+        "timer.h": "c",
+        "gpio.h": "c"
     }
 }

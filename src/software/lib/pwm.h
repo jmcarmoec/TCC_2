@@ -3,5 +3,7 @@
 */
 #ifndef PWM
 #define PWM
+    #include <LPC11xx.h>
 
+    void init_PWM();
 #endif
