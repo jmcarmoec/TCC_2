@@ -3,9 +3,11 @@
 */
 #ifndef TIMER
 #define TIMER
-    #include <LPC11xx.h>
+    #include <LPC11xx.h>    
+    
+    #define SYS_CLOCK (2.5*1000000)
 
-    #define PRESCALE (48000-1)
+    #define PRESCALE (((SYS_CLOCK)/1000)-1)
 
     void init_TIMER_0();
     void delay_MS(unsigned int milliseconds);
