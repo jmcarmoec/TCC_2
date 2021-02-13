@@ -1,13 +1,13 @@
 #include "timer.h"
 void init_TIMER_0(){
     LPC_SYSCON->SYSAHBCLKCTRL |= 1<<9;
-      LPC_SYSCON->SYSAHBCLKCTRL |= 1<<10;
-      LPC_SYSCON->SYSAHBCLKDIV =0x1;
+    LPC_SYSCON->SYSAHBCLKCTRL |= 1<<10;
+    LPC_SYSCON->SYSAHBCLKDIV =0x1;
 
-      LPC_TMR32B0->PR = PRESCALE;
+    LPC_TMR32B0->PR = PRESCALE;
 
-      LPC_TMR32B0->TCR |= 1<<1;
-      LPC_TMR32B0->TCR &= ~(1<<0);      
+    LPC_TMR32B0->TCR |= 1<<1;
+    LPC_TMR32B0->TCR &= ~(1<<0);      
 }
 void delay_MS(unsigned int milliseconds){  
 

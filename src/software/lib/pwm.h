@@ -4,6 +4,12 @@
 #ifndef PWM
 #define PWM
     #include <LPC11xx.h>
+    #include "timer.h"
+
+    #define MOTOR_0     (0)
+    #define MOTOR_1     (1)
 
     void init_PWM();
+
+    
 #endif
