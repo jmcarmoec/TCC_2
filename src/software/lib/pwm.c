@@ -25,5 +25,8 @@ void init_PWM(){
       LPC_TMR16B0->TCR = 0x2; //Reseta a contagem (pag. 329)
       LPC_TMR16B0->TCR = 0x1; //Inicia contagem (pag. 329)
 
+      /*
+            PWM Rules: Correção páginas email = 336 e 337
+      */
 }
 
