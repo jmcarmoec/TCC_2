@@ -6,6 +6,11 @@
     #include <LPC11xx.h>
     #include "timer.h"
 
+    #define CLOCK_SYS   (48) // MHz
+
+    #define PERIOD_SERVO_MOTOR_0    (20) // ms
+    #define DEFAULT_DUTY_CYCLE_SERVO_MOTOR_0 (1.7) // ms
+    
     #define MOTOR_0     (0)
     #define MOTOR_1     (1)
 
