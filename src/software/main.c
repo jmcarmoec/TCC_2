@@ -18,9 +18,26 @@
 #endif
 
 int main(void) { 
-      init_PWM();    
-      while(1){
-            
-      }
-      return 0 ;
+  init_GPIO();
+  set_DIR(3,OUTPUT);
+
+  init_UART();
+
+  init_ADC();
+  start_ADC(AD0);
+  select_ADC_channel(AD0);
+
+  init_TIMER_0();
+
+  init_PWM();
+  set_period(20);
+  set_duty_cycle(PWM_MR0,1.86);
+  set_duty_cycle(PWM_MR1,1.25);
+
+  while(1){
+    send_UART('|');
+    printf_float(get_duty_cycle(PWM_MR0));
+    delay_MS(1000);
+  }
+  return 0 ;
 }

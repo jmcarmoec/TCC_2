@@ -3,11 +3,13 @@
 */
 #ifndef UART
 #define UART
-    #include <LPC11xx.h>  
-    #include <string.h>   
-    #include <math.h>
+     #include <LPC11xx.h>  
+     #include <string.h>   
+     #include <math.h>
+     #include "timer.h"
 
-     #define FLOAT_PRECISION 4
+
+     #define FLOAT_PRECISION 6
 
     /*
         function: enable TX,RX and UART clock
