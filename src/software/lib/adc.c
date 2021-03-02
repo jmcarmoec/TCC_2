@@ -27,6 +27,10 @@ void start_ADC(int AD){
             LPC_IOCON->SWDIO_PIO1_3      &= 0xFFFFFF78;
             LPC_IOCON->SWDIO_PIO1_3      |= (1<<1);
         break;
+        case (AD5):
+            LPC_IOCON->PIO1_4       &= 0xFFFFFF78;
+            LPC_IOCON->PIO1_4       |= (1<<1);
+            break;
     }
     LPC_ADC->CR                   = 0x0B00;
 }

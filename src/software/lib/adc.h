@@ -15,6 +15,7 @@
     #define AD2     2
     #define AD3     3
     #define AD4     4
+    #define AD5     5
 
     void init_ADC();
     void start_ADC(int AD);
