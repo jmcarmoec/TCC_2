@@ -9,6 +9,9 @@
         "string.h": "c",
         "pwm.h": "c",
         "timer.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "system_actuators.h": "c",
+        "system_functions.h": "c",
+        "system_sensors.h": "c"
     }
 }
