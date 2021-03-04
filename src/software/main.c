@@ -37,20 +37,21 @@ int main(void) {
   init_UART();
 
   init_ADC();
-  start_ADC(AD4);
-  select_ADC_channel(AD4);
+  start_ADC(AD0);
+  select_ADC_channel(AD0);
 
   init_TIMER_0();
 
   init_PWM();
   set_period(20);  
-  //set_duty_cycle(PWM_MR0,1.86);
-  //set_duty_cycle(PWM_MR1,1.25);
+  set_duty_cycle(PWM_MR0,1.86);
+  set_duty_cycle(PWM_MR1,1.25);
 
   while(1){
     send_UART('|');
-    printf_int(read_ADC(AD4));
-    delay_MS(1000);
+    send_UART('N');
+    printf_int(read_ADC(AD0));
+    delay_MS(1000/2);
   }
   return 0 ;
 }
