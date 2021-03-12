@@ -13,4 +13,5 @@ void init_system(){
     start_ADC(PIN_LDR_SOUTH);
     start_ADC(PIN_LDR_WEST);
     start_ADC(PIN_LDR_EAST);
+
 }

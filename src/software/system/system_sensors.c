@@ -20,8 +20,12 @@ float get_lux_LDR(u_int8_t PIN_LDR){
             value=V_AD(read_ADC(PIN_LDR_EAST));
         break;
     }    
-    return interpolation_function(value);
+    value = p(value)-e(value);
+    return (value)<0?0.1:value;
 }
-float interpolation_function(float value){    
-    return 86.2264*expoente(value,7) - 1352.91*expoente(value,6) + 8889.32*expoente(value,5) - 31590.9*expoente(value,4) + 65337.4*expoente(value,3) - 78254.1*expoente(value,2) + 50073.6*value - 13081.7;
+float p(float x){
+    return 118.6914204*expoente(x,2) - 187.4369988*x + 68.8980274;
+}
+float e(float x){
+    return ((-37.72388518*x*x*x)+(207.09982962*x*x)-(304.99913932*x)+(71.50709816));
 }

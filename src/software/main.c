@@ -37,6 +37,10 @@ int main(void) {
   */
   init_system();
 
+  set_motor(PIN_PWM_MOTOR_EAST_WEST,GRAUS_TO_RADIANOS(126));
+  set_motor(PIN_PWM_MOTOR_NORTH_SOUTH,GRAUS_TO_RADIANOS(74));
+
+
   while(1){
     send_UART('|');
     printf_float(get_lux_LDR(PIN_LDR_NORTH));

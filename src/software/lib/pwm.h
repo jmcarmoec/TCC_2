@@ -10,7 +10,7 @@
     #define CLOCK_SYS   (48) // MHz
 
     #define PWM_PERIOD_DEFAULT    (20) // ms
-    #define PWM_DEFAULT_DUTY_CYCLE (1.5) // ms    
+    #define PWM_DEFAULT_DUTY_CYCLE (1) // ms    
 
     
     #define PWM_MR0     (0)
