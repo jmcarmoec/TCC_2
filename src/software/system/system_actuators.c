@@ -1,6 +1,6 @@
 #include "system_actuators.h"
 
-float set_motor(int motor, float INC_RAD_MOTOR){
+float set_motor_inc(int motor, float INC_RAD_MOTOR){
 
     switch(motor){
         case PIN_PWM_MOTOR_NORTH_SOUTH:

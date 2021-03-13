@@ -1,8 +1,9 @@
 #include "adc.h"
-
+#include "uart.h"
 void init_ADC(){    
     LPC_SYSCON->PDRUNCFG        &= ~(1<<4); 
-    LPC_SYSCON->SYSAHBCLKCTRL   |= (1<<13);       
+    LPC_SYSCON->SYSAHBCLKCTRL   |= (1<<13);
+    //LPC_ADC->CR                 |= (1<<16);      
 }
 
 void start_ADC(int AD){
@@ -30,15 +31,18 @@ void start_ADC(int AD){
         case (AD5):
             LPC_IOCON->PIO1_4       &= 0xFFFFFF78;
             LPC_IOCON->PIO1_4       |= (1<<1);
-            break;
+        break;
     }
     LPC_ADC->CR                   = 0x0B00;
 }
 void select_ADC_channel(int AD){
-    LPC_ADC->CR                   |= 1<<AD;
+    //LPC_ADC->CR &= ~(0xFF);        
+    LPC_ADC->CR |= 1<<AD;
 }
 int read_ADC(int AD){
-    LPC_ADC->CR     |= (1<<24);
-    while((LPC_ADC->DR[AD] < 0x7FFFFFFF));     
+    LPC_ADC->CR |= 1<<AD;
+    LPC_ADC->CR     |= (1<<24);    
+    while((LPC_ADC->DR[AD] < 0x7FFFFFFF));   
+    LPC_ADC->CR &= ~(1<<AD);  
     return ((LPC_ADC->DR[AD] & 0xFFC0) >> 8);
 }

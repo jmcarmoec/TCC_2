@@ -9,7 +9,7 @@
     #include "../lib/gpio.h"
     #include "../lib/pwm.h"
     #include "../lib/timer.h"
-
+    #include "math.h"
     #if DEBUG_FLAG
         #include "../lib/uart.h"
     #endif
@@ -28,6 +28,13 @@
     #define PIN_LDR_SOUTH       (AD1)
     #define PIN_LDR_EAST        (AD2)
     #define PIN_LDR_WEST        (AD3)
-    
+
+    #define PI (3.14159265359)
+
+    #define RADIANOS_TO_GRAUS(RAD)      ((180*RAD)/(PI))
+    #define GRAUS_TO_RADIANOS(GRA)      ((PI*GRA)/(180))
+
     void init_system();
+
+    float tracking_sun_position(float value_lux_sensor_A,float value_lux_sensor_B); // Recebe os valores de leitura dos sensores Leste e Oeste e retorna o ângulo entre 0~2pi, sendo 0 onde o sol nasce e 180 onde se põe.    
 #endif

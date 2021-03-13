@@ -11,7 +11,7 @@ void init_UART(){
 void send_UART(char data){    
     LPC_UART->THR &= 0x00;
     LPC_UART->THR |= data;  
-    delay_MS(50);
+    delay_MS(20);
 }
 unsigned int recv_UART(){
     char data;
