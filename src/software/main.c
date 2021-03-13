@@ -16,6 +16,7 @@ int main(void) {
   float rad_inc_E_W=0;
   float rad_inc_N_S=0;
   while(1){
+    
     lux_west =  get_lux_LDR(PIN_LDR_WEST);
     lux_east =  get_lux_LDR(PIN_LDR_EAST);
     lux_north=  get_lux_LDR(PIN_LDR_NORTH);
@@ -28,8 +29,9 @@ int main(void) {
     set_motor_inc(PIN_PWM_MOTOR_NORTH_SOUTH,rad_inc_N_S); 
 
     send_UART('>');
-    printf_float(rad_inc_E_W);
+    printf_float(lux_north);
     delay_MS(1000);
+    
   }
   return 0 ;
 }

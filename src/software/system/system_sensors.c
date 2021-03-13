@@ -24,7 +24,7 @@ float get_lux_LDR(u_int8_t PIN_LDR){
     return (value)<0?0.1:value;
 }
 float p(float x){
-    return 118.6914204*x*x - 187.4369988*x + 68.8980274;
+    return 40.3425911553458*x*x*x - 121.122548613755*x*x + 178.372220206103*x - 11.0450859356278;
 }
 float e(float x){
     return ((-37.72388518*x*x*x)+(207.09982962*x*x)-(304.99913932*x)+(71.50709816));
