@@ -12,5 +12,8 @@
     #define RAD_TO_MS(RAD)  (((1/(PI))*(RAD))+1)
     #define MS_TO_RAD(MS)   (PI*(MS-1))
     
-    float set_motor_inc(int motor, float INC_RAD_MOTOR);//Motor norte-sul ou leste-oeste | inclinação do motor em radianos | retorna inclinação antiga
+    #define IMMEDIATE_VALUE     (0)
+    #define MATH_VALUE          (1)
+
+    float set_motor_inc(int PIN_MOTOR, float INC_RAD_MOTOR,int TYPE_VALUE);//Motor norte-sul ou leste-oeste | inclinação do motor em radianos | retorna inclinação antiga
 #endif

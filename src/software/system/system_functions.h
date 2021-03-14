@@ -34,7 +34,13 @@
     #define RADIANOS_TO_GRAUS(RAD)      ((180*RAD)/(PI))
     #define GRAUS_TO_RADIANOS(GRA)      ((PI*GRA)/(180))
 
+    #define Kp  (0.05)
+    #define Ki  (0.098)
+    #define Kd  (0.0525)
+
     void init_system();
 
     float tracking_sun_position(float value_lux_sensor_A,float value_lux_sensor_B); // Recebe os valores de leitura dos sensores Leste e Oeste e retorna o ângulo entre 0~2pi, sendo 0 onde o sol nasce e 180 onde se põe.    
+    float get_radianos_motor(int PIN_MOTOR);
+    float control_motor(int PIN_MOTOR,float set_point);
 #endif
