@@ -15,6 +15,7 @@ int main(void) {
   float lux_south=0;
   float rad_inc_E_W=0;
   float rad_inc_N_S=0;
+  
   while(1){
     
     lux_west =  get_lux_LDR(PIN_LDR_WEST);
@@ -25,8 +26,9 @@ int main(void) {
     rad_inc_E_W = tracking_sun_position(lux_east,lux_west);
     rad_inc_N_S = tracking_sun_position(lux_north,lux_south);
 
-    control_motor(PIN_PWM_MOTOR_NORTH_SOUTH,rad_inc_N_S);
     control_motor(PIN_PWM_MOTOR_EAST_WEST,rad_inc_E_W);
+    //control_motor(PIN_PWM_MOTOR_NORTH_SOUTH,rad_inc_N_S);
+    
     
     delay_MS(1000);
     

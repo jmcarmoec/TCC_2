@@ -35,7 +35,7 @@
     #define GRAUS_TO_RADIANOS(GRA)      ((PI*GRA)/(180))
 
     #define Kp  (0.05)
-    #define Ki  (0.098)
+    #define Ki  (0.98)
     #define Kd  (0.0525)
 
     void init_system();

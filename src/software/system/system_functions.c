@@ -34,21 +34,20 @@ float get_radianos_motor(int PIN_MOTOR){
 }
 float control_motor(int PIN_MOTOR,float set_point){    
     float point = MS_TO_RAD(get_duty_cycle(PIN_MOTOR));
-    float erro_faixa = GRAUS_TO_RADIANOS(1);
+    float erro_faixa = GRAUS_TO_RADIANOS(1.5);
     float erro = 0;
     float Up = 0;
     float Ui = 0;
     float Ud = 0;
-    float U  = 0;
-    float dt = 30*PI;    
+    float U  = 0;        
     for(float i=0;!((point>=set_point-erro_faixa)&&(point<=set_point+erro_faixa));i=i+(PI/300)){
         erro = set_point-point;
         Up = Kp*erro;
         Ui = Ki*erro*i;        
-        Ud = Kd*erro/dt;
+        Ud = Kd*erro/i;
         U = Up+Ui+Ud;
         //send_UART(' ');
-        //printf_float(U);
+        //printf_float(point);
         set_motor_inc(PIN_MOTOR,U,MATH_VALUE);
 
         point = MS_TO_RAD(get_duty_cycle(PIN_MOTOR));
