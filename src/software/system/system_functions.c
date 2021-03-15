@@ -45,11 +45,12 @@ float control_motor(int PIN_MOTOR,float set_point){
         Up = Kp*erro;
         Ui = Ki*erro*i;        
         Ud = Kd*erro/i;
-        U = Up+Ui+Ud;
-        //send_UART(' ');
-        //printf_float(point);
+        U = Up+Ui+Ud;        
+        /*Atuação na planta*/
+
         set_motor_inc(PIN_MOTOR,U,MATH_VALUE);
 
+        /*-------*/
         point = MS_TO_RAD(get_duty_cycle(PIN_MOTOR));
     }
     return U;
