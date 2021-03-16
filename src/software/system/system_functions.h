@@ -15,11 +15,11 @@
     #endif
 
     #define PIN_LED_STATUS_SYSTEM       (5)//0_5
+    #define PIN_DAY_STATUS              (1)//0_1
+    #define PIN_NIGHT_STATUS            (2)//0_2
+    #define PIN_ACTUATOR_L_W_STATUS     (3)//0_3
+    #define PIN_ACTUATOR_N_S_STATUS     (4)//0_4
 
-    #define PIN_MOTOR_0_CONTROL_ENABLE  (1)//0_1
-    #define PIN_MOTOR_1_CONTROL_ENABLE  (2)//0_2
-    #define PIN_MOTOR_0_CONTROL         (3)//0_3
-    #define PIN_MOTOR_1_CONTROL         (4)//0_4
     #define PIN_PWM_MOTOR_NORTH_SOUTH               (PWM_MR1)
     #define PIN_PWM_MOTOR_EAST_WEST                 (PWM_MR0)
     #define PIN_MOTOR_0_1_SANS                      (AD4)

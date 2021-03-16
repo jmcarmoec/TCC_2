@@ -11,18 +11,30 @@ void init_system(){
     init_PWM();
     init_ADC();
     
+    set_DIR(PIN_DAY_STATUS,OUTPUT);
+    set_DIR(PIN_ACTUATOR_L_W_STATUS,OUTPUT);
+    set_DIR(PIN_ACTUATOR_N_S_STATUS,OUTPUT);
+    set_DIR(PIN_LED_STATUS_SYSTEM,OUTPUT);
+
+    write_digital_gpio(PIN_DAY_STATUS,LOW);
+    write_digital_gpio(PIN_ACTUATOR_L_W_STATUS,LOW);
+    write_digital_gpio(PIN_ACTUATOR_N_S_STATUS,LOW);
+    write_digital_gpio(PIN_LED_STATUS_SYSTEM,LOW);
+
     start_ADC(PIN_LDR_NORTH);
     start_ADC(PIN_LDR_SOUTH);
     start_ADC(PIN_LDR_EAST);
-    start_ADC(PIN_LDR_WEST);    
+    start_ADC(PIN_LDR_WEST);  
+
+    write_digital_gpio(PIN_LED_STATUS_SYSTEM,HIGH);
 
 }
 
 float tracking_sun_position(float value_lux_sensor_A,float value_lux_sensor_B){
     if(value_lux_sensor_A>value_lux_sensor_B){
-        return (PI*value_lux_sensor_A)/(2*(GET_LUX_MAX));
+        return (((PI*value_lux_sensor_A)/(2*(GET_LUX_MAX)))>(PI/2))?(PI/2):((PI*value_lux_sensor_A)/(2*(GET_LUX_MAX)));
     }else if(value_lux_sensor_B>value_lux_sensor_A){
-        return (-PI*value_lux_sensor_B)/(2*(GET_LUX_MAX))+PI;
+        return (((-PI*value_lux_sensor_B)/(2*(GET_LUX_MAX))+PI)>(PI))?(PI):((-PI*value_lux_sensor_B)/(2*(GET_LUX_MAX))+PI);
     }
     return PI/2;
 }
@@ -49,7 +61,7 @@ float control_motor(int PIN_MOTOR,float set_point){
         /*Atuação na planta*/
 
         set_motor_inc(PIN_MOTOR,U,MATH_VALUE);
-
+        delay_MS(10);
         /*-------*/
         point = MS_TO_RAD(get_duty_cycle(PIN_MOTOR));
     }
