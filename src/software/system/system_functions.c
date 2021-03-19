@@ -67,3 +67,58 @@ float control_motor(int PIN_MOTOR,float set_point){
     }
     return U;
 }
+float get_azimuth_by_angle(float inc_N_S,float inc_E_W){        
+
+    if((inc_N_S==inc_E_W)&&(inc_E_W==(PI/2))){
+        return 0;
+    }
+
+    if(inc_E_W<(PI/2)){
+        if(inc_N_S<(PI/2)){
+            //printf("A");
+            return (PI/2)-inc_E_W;
+        }else{
+            //printf("B");
+            return (PI/2)+inc_E_W;
+        }
+    }else{        
+        if(inc_N_S<(PI/2)){
+            //printf("C");
+            return (PI)-inc_E_W+(3*PI/2);
+        }else{
+            //printf("D");
+            return (PI/2)+inc_E_W;
+        }
+    }
+}
+float get_altitude_by_angle(float inc_N_S){
+    if(inc_N_S<(PI/2)){
+        return inc_N_S;
+    }else{
+        return (PI)-inc_N_S;
+    }
+}
+
+float get_inc_N_S_by_Azimuth_Altitude(float azimuth, float altitude){
+    if((azimuth>(PI/2))&&(azimuth<(3*PI/2))){
+        return (PI/2)-altitude+(PI/2);
+    }else{
+        return altitude;
+    }
+}
+float get_inc_E_W_by_Azimuth_Altitude(float azimuth, float altitude){    
+    
+    if((azimuth>=0)&&(azimuth<=(PI/2))){
+        return (PI/2)-azimuth;
+    }
+    if((azimuth>(PI/2))&&(azimuth<=(PI))){
+        return azimuth - (PI/2) ;
+    }
+    if((azimuth>(PI))&&(azimuth<=(3*PI/2))){
+        return azimuth-(PI)+(PI/2);
+    }
+    if((azimuth>(3*PI/2))&&(azimuth<=(2*PI))){
+        return (2*PI)-azimuth+(PI/2);
+    }  
+    return 0;      
+}

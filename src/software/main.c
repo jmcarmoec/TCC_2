@@ -46,7 +46,7 @@ int main(void) {
 
   init_system();
   state = STATE_EAST_WEST;
-  
+  send_UART('a');
   while(1){        
     switch (state){
     case (STATE_EAST_WEST):
@@ -86,7 +86,11 @@ int main(void) {
       state = STATE_SLEEP;
       break;    
     case (STATE_SLEEP):
-      if(time==DAY){
+    send_UART('z');
+    printf_float(RADIANOS_TO_GRAUS(get_azimuth_by_angle(radians_north_south,radians_east_west)));
+    send_UART('a');
+    printf_float(RADIANOS_TO_GRAUS(get_altitude_by_angle(radians_north_south)));    
+      if(time==DAY){        
         delay_MS(SLEEP_TIME_DAY);
       }else{                        
         delay_MS(SLEEP_TIME_NIGHT);        

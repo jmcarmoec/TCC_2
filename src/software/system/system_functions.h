@@ -43,4 +43,11 @@
     float tracking_sun_position(float value_lux_sensor_A,float value_lux_sensor_B); // Recebe os valores de leitura dos sensores Leste e Oeste e retorna o ângulo entre 0~2pi, sendo 0 onde o sol nasce e 180 onde se põe.    
     float get_radianos_motor(int PIN_MOTOR);
     float control_motor(int PIN_MOTOR,float set_point);
+
+    float get_azimuth_by_angle(float inc_N_S,float inc_E_W);
+    float get_altitude_by_angle(float inc_N_S);
+
+    float get_inc_N_S_by_Azimuth_Altitude(float azimuth, float altitude);
+    float get_inc_E_W_by_Azimuth_Altitude(float azimuth, float altitude);
+    
 #endif
